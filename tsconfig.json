@@ -2,6 +2,16 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@delta-stream/core": [
+        "dist/delta-stream/core/delta-stream-core",
+        "dist/delta-stream/core"
+      ],
+      "@delta-stream/ui": [
+        "dist/delta-stream/ui/delta-stream-ui",
+        "dist/delta-stream/ui"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
@@ -12,12 +22,11 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "es2020",
-    "lib": [
-      "es2018",
-      "dom"
-    ]
+    "lib": ["es2018", "dom"]
   },
   "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false
+    "enableI18nLegacyMessageIdFormat": false,
+    "strict": true,
+    "strictTemplates": true
   }
 }
